@@ -32,7 +32,7 @@ Below is the BibTex for citing this snapshot of the repository.
 }  
 ```
 
-## Description
+# Description
 
 This distribution includes the source code and the data sets needed to reproduce the results of the paper
 "Cluster Branching for Vehicle Routing Problems" by Joao Marcos Pereira Silva, Eduardo Uchoa, and Anand Subramanian
@@ -48,7 +48,7 @@ In order to run the code, one needs
 
 BaPCod also requires free softwares **CMake**, **Boost**, and **LEMON**. Installation instructions for BaPCod, Boost, and LEMON libraries can be found in the README file distributed with BaPCod. 
 
-The CVRPSep library may also be required. For instructions on integrating this library with BaPCod, please refer to the documentation distributed with BaPCod.
+The *CVRPSep* library may also be required. For instructions on integrating this library with BaPCod, please refer to the documentation distributed with BaPCod.
 
 # Compiling code
 
@@ -66,16 +66,16 @@ The CVRPSep library may also be required. For instructions on integrating this l
 For further details on compiling BaPCod applications, please refer to the documentation.
 
 
-## Results
+# Results
 
 The detailed results are provided in the `results` directory.
 
-## Data and Replication
+# Data and Replication
 
 - Since the paper evaluates the proposed methodology on two VRP problems, the `src` directory contains a separate folder for each of them.
 - Inside each folder, there is a `data` subdirectory with the considered instances, the configuration files used, and other related resources.
 - Instructions to replicate each experiment are provided in the corresponding `README.md` file within these folders.
 
-## Support
+# Support
 
 The code is not supported.
