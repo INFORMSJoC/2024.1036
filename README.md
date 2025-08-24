@@ -73,8 +73,21 @@ The detailed results are provided in the `results` directory.
 ## Data and Replication
 
 - Since the paper evaluates the proposed methodology on two VRP problems, the `src` directory contains a separate folder for each of them.
-- Inside each folder, there is a `data` subdirectory with the considered instances, the configuration files used, and other related resources.
 - Instructions to replicate each experiment are provided in the corresponding `README.md` file within these folders.
+- The experiments reported in the paper were conducted using three benchmark sets:
+
+1. **The XML benchmark** (Queiroga et al., 2021) 
+   Reference: Queiroga E, Sadykov R, Uchoa E, Vidal T (2021). *10,000 optimal CVRP solutions for testing machine learning based heuristics.* AAAI-22 Workshop on Machine Learning for Operations Research (ML4OR).
+
+2. **The X benchmark** (Uchoa et al., 2017) 
+   Reference: Uchoa E, Pecin D, Pessoa A, Poggi M, Vidal T, Subramanian A (2017). *New benchmark instances for the capacitated vehicle routing problem.* European Journal of Operational Research, 257(3):845–858.
+
+3. **The Homberger and Gehring benchmark** (Gehring and Homberger, 1999)
+   Reference: Gehring H, Homberger J (1999). *A parallel hybrid evolutionary metaheuristic for the vehicle routing problem with time windows.* Proceedings of EUROGEN99, volume 2, 57–64.
+
+Please note that these datasets are **not included** in this repository. Anyone interested in using them should consult the original references.
+All datasets can also be accessed online at [VRP Web Page, PUC-Rio](https://vrp.atd-lab.inf.puc-rio.br/index.php/en/).
+
 
 ## Support
 
