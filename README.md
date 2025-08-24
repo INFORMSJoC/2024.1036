@@ -7,7 +7,7 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[Cluster Branching for Vehicle Routing Problems](https://doi.org/10.1287/ijoc.2024.1036) by by Joao Marcos Pereira Silva, Eduardo Uchoa, and Anand Subramanian. 
+[Cluster Branching for Vehicle Routing Problems](https://doi.org/10.1287/ijoc.2024.1036) by Joao Marcos Pereira Silva, Eduardo Uchoa, and Anand Subramanian. 
 
 
 ## Cite
