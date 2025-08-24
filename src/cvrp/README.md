@@ -25,8 +25,6 @@ This README explains the parameters and options for running the CVRP (Capacitate
       - **app_*.cfg**: Application-specific configuration files.
     - **(CVRP Specific) `cvrp/clusters/`**: Contains the clustering files for the XML benchmark. The clustering was obtained using Kmeans, Kmedoids, and DBSCAN, and the files are identified by `<instance name>_<clustering algorithm name>.txt`. The file format is intuitive.
   - **`bapcodframework/build/Applications/<app folder>/bin/`**: Contains the compiled executables for the CVRP and VRPTW applications.
-- **paper.pdf**: The research paper detailing the methodology and experiments.
-- **supplementary_material.xlsx**: Supplementary material related to the research paper.
 
 ## Parameters and Options
 
