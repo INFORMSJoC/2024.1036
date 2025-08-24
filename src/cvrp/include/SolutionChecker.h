@@ -1,0 +1,46 @@
+/*
+ *  Dependencies:
+ *  - BaPCod v0.82.5
+ *  - VRPSolver extension (RCSP solver) v0.6.10
+ */
+
+#ifndef CVRP_JOAO_SOLUTIONCHECKER_H
+#define CVRP_JOAO_SOLUTIONCHECKER_H
+
+#include <bcModelPointerC.hpp>
+#include <bcModelRCSPSolver.hpp>
+#include "InputUser.h"
+
+#include <vector>
+
+namespace cvrp_joao
+{
+    struct Route
+    {
+        int id;
+        double cost;
+        std::vector<int> vertIds;
+        double capConsumption;
+
+        Route(const BcSolution & solution, int id);
+    };
+
+    struct Solution
+    {
+        std::vector<Route> routes;
+        double cost;
+        bool feasible;
+
+        explicit Solution(const BcSolution & solution);
+    };
+
+    class SolutionChecker : public BcSolutionFoundCallback, public InputUser
+    {
+    public:
+        bool isFeasible(BcSolution& solution, bool printSolution = false, bool best = false,
+                        bool printDebugSolution = false) const;
+        bool operator()(BcSolution new_solution) const override;
+    };
+}
+
+#endif

@@ -34,68 +34,48 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+This distribution includes the source code and the data sets needed to reproduce the results of the paper
+"Cluster Branching for Vehicle Routing Problems" by Joao Marcos Pereira Silva, Eduardo Uchoa, and Anand Subramanian
+published in the Operations Research journal.
 
-## Building
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+# Requirements
 
-```
-make mult
-```
+In order to run the code, one needs 
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+- Branch-Cut-and-Price solver **BaPCod** (version 0.82.5 and above) which can be downloaded for free (for academic use only) on its web-site https://bapcod.math.u-bordeaux.fr/
+- MILP solver **IBM ILOG Cplex** (version 20.1 and above) which can be downloaded also for free (academic edition only) on its web-site https://www.ibm.com/products/ilog-cplex-optimization-studio.
 
-```
-make clean
-make sum
-```
+BaPCod also requires free softwares **CMake**, **Boost**, and **LEMON**. Installation instructions for BaPCod, Boost, and LEMON libraries can be found in the README file distributed with BaPCod. 
 
-Be sure to make clean before building a different version of the code.
+The CVRPSep library may also be required. For instructions on integrating this library with BaPCod, please refer to the documentation distributed with BaPCod.
+
+# Compiling code
+
+1. Install *Cplex*, *CMake*, *Boost*, *LEMON*, and *BaPCod*. We suppose that *BaPCod* is installed to the folder *BapcodFramework*. 
+2. Create the folder *BapcodFramework/Applications/cvrp* and put all files from this distribution inside this folder. For example this file should have path *BapcodFramework/Applications/cvrp/README.md*
+3. Open file *BapcodFramework/Applications/CMakeLists.txt* and add *cvrp* directory inside *add_subdirectories(...)*
+4. Go to folder *BapcodFramework* and type the following on Linux or Mac OS
+        
+        cmake -B "build"  
+
+    Then, compilation can be launched with 
+
+        cmake --build build --config Release --target cvrp -j 8
+
+For further details on compiling BaPCod applications, please refer to the documentation.
+
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+The detailed results are provided in the `results` directory.
 
-![Figure 1](results/mult-test.png)
+## Data and Replication
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
+- Since the paper evaluates the proposed methodology on two VRP problems, the `src` directory contains a separate folder for each of them.
+- Inside each folder, there is a `data` subdirectory with the considered instances, the configuration files used, and other related resources.
+- Instructions to replicate each experiment are provided in the corresponding `README.md` file within these folders.
 
 ## Support
 
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+The code is not supported.
